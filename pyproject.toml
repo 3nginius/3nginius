@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "revsearch"
+version = "0.1.0"
+description = "Reverse video/image search pipeline: yt-dlp -> ffmpeg keyframes -> perceptual hash dedup -> multi-provider reverse search."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "3nginius" }]
+dependencies = [
+  "yt-dlp>=2024.0.0",
+  "requests>=2.31",
+  "Pillow>=10.0",
+  "imagehash>=4.3",
+]
+
+[project.scripts]
+revsearch = "revsearch.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["revsearch*"]

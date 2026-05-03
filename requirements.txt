@@ -1,0 +1,4 @@
+yt-dlp>=2024.0.0
+requests>=2.31
+Pillow>=10.0
+imagehash>=4.3
